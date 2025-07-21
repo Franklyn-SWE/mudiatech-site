@@ -2,26 +2,83 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f5f5f5;
+  line-height: 1.6;
   color: #333;
+  background: #f4f4f4;
 }
-header {
-  background: #1e1e2f;
-  color: #fff;
-  padding: 2rem;
+
+header.hero {
+  background: linear-gradient(to right, #111, #333);
+  color: white;
+  padding: 3rem 1rem;
   text-align: center;
+  position: relative;
 }
-nav a {
-  color: #fff;
-  margin: 0 1rem;
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+.hero-content .highlight {
+  color: #00d1b2;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #00d1b2;
+  color: white;
+  border-radius: 5px;
   text-decoration: none;
+  transition: background 0.3s;
 }
+
+.cta-button:hover {
+  background: #00b89c;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 section {
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  margin-top: 1rem;
+  border-radius: 8px;
 }
+
+.services {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-card {
+  background: #e9f9f8;
+  padding: 1rem;
+  border-left: 4px solid #00d1b2;
+  border-radius: 6px;
+}
+
 footer {
   text-align: center;
-  background: #1e1e2f;
-  color: white;
   padding: 1rem;
+  background: #222;
+  color: white;
+  margin-top: 2rem;
 }
