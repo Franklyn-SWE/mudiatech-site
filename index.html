@@ -1,76 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MudiaTech</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      /* Optional: transition for smooth background/text color changes */
+      html {
+        transition: background-color 0.3s, color 0.3s;
+      }
+    </style>
   </head>
-  <body>
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Welcome to <span class="highlight">MudiaTech</span></h1>
-        <p>
-          We create intelligent solutions powered by AI, software, and
-          creativity.
-        </p>
-        <a href="#contact" class="cta-button">Get in Touch</a>
-      </div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500 font-sans"
+  >
+    <!-- Header -->
+    <!-- Header -->
+    <header
+      class="relative text-center py-12 bg-gradient-to-r from-teal-600 to-cyan-700 dark:from-teal-900 dark:to-cyan-900 text-white shadow-lg"
+    >
+      <!-- Company Name -->
+      <h1
+        class="text-5xl font-extrabold tracking-wide drop-shadow-lg font-sans"
+      >
+        MudiaTech
+      </h1>
+
+      <!-- Subheading with bullets -->
+      <h2
+        class="mt-4 flex justify-center items-center space-x-3 text-lg font-semibold text-indigo-200 dark:text-indigo-400"
+      >
+        <span>Innovative AI</span>
+        <span class="text-indigo-500 dark:text-indigo-400 text-xl">•</span>
+        <span>Software Engineering</span>
+        <span class="text-indigo-500 dark:text-indigo-400 text-xl">•</span>
+        <span>Data-Driven Solutions</span>
+      </h2>
+
+      <!-- Navigation -->
+      <nav class="mt-8 flex justify-evenly max-w-4xl mx-auto space-x-4">
+        <a
+          href="#about"
+          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
+          >Services</a
+        >
+        <a
+          href="#portfolio"
+          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
+          >Portfolio</a
+        >
+        <a
+          href="#contact"
+          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
+          >Contact</a
+        >
       </nav>
+
+      <!-- Dark Mode Toggle -->
+      <button
+        id="theme-toggle"
+        aria-label="Toggle Dark Mode"
+        title="Toggle Dark Mode"
+        class="absolute top-4 right-4 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:ring-2 hover:ring-blue-400 transition"
+      >
+        <span
+          id="toggle-icon"
+          class="text-gray-900 dark:text-yellow-400 text-xl"
+          >🌙</span
+        >
+      </button>
     </header>
 
-    <section id="about">
-      <h2>About Us</h2>
+    <!-- About -->
+    <section id="about" class="px-6 py-10 text-center max-w-4xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-4">About Us</h2>
       <p>
-        MudiaTech delivers intelligent tech solutions, from AI models to
-        full-stack applications, empowering businesses and transforming
-        industries.
+        MudiaTech is a UK-based tech company delivering AI, software
+        development, and educational training solutions to empower individuals
+        and businesses with modern tools.
       </p>
     </section>
 
-    <section id="services">
-      <h2>What We Offer</h2>
-      <div class="services">
-        <div class="service-card">
-          <h3>🤖 AI Development</h3>
+    <!-- Services -->
+    <section
+      id="services"
+      class="bg-gray-100 dark:bg-gray-800 px-6 py-10 max-w-6xl mx-auto rounded-lg shadow-lg"
+    >
+      <h2 class="text-3xl font-semibold mb-6 text-center">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2">AI Model Development</h3>
           <p>
-            Custom-trained models for real-world impact (e.g. detection,
-            prediction, automation).
+            We build intelligent models to solve real-world problems in health,
+            crime, property, and more.
           </p>
         </div>
-        <div class="service-card">
-          <h3>🌐 Web & App Development</h3>
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2">Web & App Development</h3>
           <p>
-            Modern, responsive websites and scalable mobile/web applications.
+            Custom software, websites, and mobile apps built with modern tech
+            stacks.
           </p>
         </div>
-        <div class="service-card">
-          <h3>🎓 Tech Bootcamps</h3>
+        <div
+          class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
+        >
+          <h3 class="text-xl font-bold mb-2">Bootcamp Training</h3>
           <p>
-            Hands-on training in Python, ML, AI, and full-stack development for
-            beginners and pros.
+            Training for beginners and professionals in data science, web
+            development, and AI tools.
           </p>
         </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>
-        📩 Email:
-        <a href="mailto:contact@mudiatech.co.uk">contact@mudiatech.co.uk</a>
+    <!-- Portfolio -->
+    <section id="portfolio" class="px-6 py-10 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Our Portfolio</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Human Trafficking Model</h3>
+          <p>
+            Multi-label AI model for detecting coercion in trafficking reports.
+          </p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">UK House Price Predictor</h3>
+          <p>Streamlit app to predict UK house prices using ML.</p>
+        </div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+          <h3 class="text-xl font-semibold mb-2">Property Management Portal</h3>
+          <p>A full-stack Django platform for managing rental properties.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section
+      id="contact"
+      class="bg-gray-100 dark:bg-gray-800 px-6 py-10 max-w-xl mx-auto rounded-lg shadow-lg"
+    >
+      <h2 class="text-3xl font-semibold mb-6 text-center">Contact Us</h2>
+      <form
+        class="grid gap-4"
+        action="https://formspree.io/f/your-id"
+        method="POST"
+      >
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required
+          class="p-3 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required
+          class="p-3 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        />
+        <textarea
+          name="message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          class="p-3 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition"
+        >
+          Send Message
+        </button>
+      </form>
+      <p class="mt-4 text-center">
+        Or email us directly at
+        <a href="mailto:contact@mudiatech.co.uk" class="underline">
+          contact@mudiatech.co.uk
+        </a>
       </p>
     </section>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="bg-blue-600 dark:bg-blue-900 text-white py-6 text-center">
       <p>© 2025 MudiaTech Limited. All rights reserved.</p>
+      <div class="mt-3 flex justify-center space-x-6 text-lg">
+        <a
+          href="https://twitter.com/mudiatech"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          class="hover:text-blue-300"
+          >🐦</a
+        >
+        <a
+          href="https://linkedin.com/company/mudiatech"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          class="hover:text-blue-300"
+          >🔗</a
+        >
+        <a
+          href="https://github.com/mudiatech"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="hover:text-blue-300"
+          >🐙</a
+        >
+      </div>
     </footer>
+
+    <!-- Dark mode toggle script -->
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
+      const toggleIcon = document.getElementById("toggle-icon");
+      const htmlEl = document.documentElement;
+
+      // Initialize from localStorage
+      if (
+        localStorage.getItem("theme") === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        htmlEl.classList.add("dark");
+        toggleIcon.textContent = "☀️"; // sun icon for dark mode active
+      } else {
+        toggleIcon.textContent = "🌙"; // moon icon for light mode active
+      }
+
+      toggleBtn.addEventListener("click", () => {
+        if (htmlEl.classList.contains("dark")) {
+          htmlEl.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+          toggleIcon.textContent = "🌙";
+        } else {
+          htmlEl.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+          toggleIcon.textContent = "☀️";
+        }
+      });
+    </script>
   </body>
 </html>
