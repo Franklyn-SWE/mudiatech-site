@@ -12,6 +12,10 @@
         darkMode: "class",
       };
     </script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
 
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -36,189 +40,388 @@
     <header
       class="flex flex-col md:flex-row items-center justify-between px-6 py-4 bg-gradient-to-r from-teal-600 to-cyan-700 text-white shadow-md space-y-4 md:space-y-0"
     >
-      <!-- Left: Logo + Title -->
       <div class="flex items-center space-x-3">
         <img src="assets/logo2.png" alt="MudiaTech Logo" class="h-10 w-auto" />
         <h1 class="text-2xl font-bold">MudiaTech</h1>
       </div>
-
-      <!-- Right: Navigation -->
       <nav class="flex flex-wrap justify-center md:justify-end gap-4">
-        <a href="#about" class="hover:underline text-base">About</a>
-        <a href="#services" class="hover:underline text-base">Services</a>
-        <a href="#portfolio" class="hover:underline text-base">Portfolio</a>
-        <a href="#contact" class="hover:underline text-base">Contact</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#services" class="hover:underline">Services</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#contact" class="hover:underline">Contact</a>
       </nav>
     </header>
+
     <!-- Main Content -->
+    <section class="text-center py-20 px-6 bg-white">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+        Empowering Innovation with Software, Data & AI
+      </h2>
+      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+        MudiaTech delivers high-quality digital solutions—ranging from web apps
+        and APIs to machine learning models—tailored for startups, businesses,
+        and organizations.
+      </p>
+    </section>
+
     <main class="px-6">
       <!-- About -->
-      <section
-        id="about"
-        class="max-w-4xl mx-auto py-14 text-center"
-        data-aos="fade-up"
-      >
-        <h2 class="text-3xl font-bold mb-4">About Us</h2>
-        <p>
-          MudiaTech is a UK-based technology company delivering intelligent
-          solutions across AI, web development, and tech education. We help
-          businesses innovate with cutting-edge tools and strategies.
+      <section id="about" class="py-16 px-6 bg-gray-50 text-center">
+        <h3 class="text-3xl font-semibold mb-4 text-gray-800">Who We Are</h3>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          MudiaTech is a UK-based technology company passionate about building
+          digital tools and AI-powered solutions. We specialize in creating
+          robust software systems, machine learning models, and data pipelines
+          that solve real-world problems.
         </p>
       </section>
 
       <!-- Services -->
-      <section
-        id="services"
-        class="bg-gray-100 dark:bg-gray-800 py-14 rounded-lg max-w-6xl mx-auto"
-        data-aos="fade-up"
-      >
-        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div
-            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
-          >
-            <h3 class="text-xl font-semibold mb-2">AI Model Development</h3>
-            <p>
-              Custom ML models for solving problems in healthcare, crime, real
-              estate, and more.
+      <section id="services" class="py-16 px-6 bg-white text-center">
+        <h3 class="text-3xl font-semibold mb-8 text-gray-800">Our Services</h3>
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left">
+          <div>
+            <h4 class="text-xl font-bold text-teal-700 mb-2">
+              Web Development
+            </h4>
+            <p class="text-gray-600">
+              Custom websites and web applications using modern technologies
+              like HTML, CSS, JavaScript, Django, and React.
             </p>
           </div>
-          <div
-            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
-          >
-            <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
-            <p>
-              Responsive, scalable web and mobile applications tailored for your
-              needs.
+          <div>
+            <h4 class="text-xl font-bold text-teal-700 mb-2">
+              Data Science & AI
+            </h4>
+            <p class="text-gray-600">
+              Building intelligent models to derive insights and automate
+              decisions, including predictive analytics and NLP.
             </p>
           </div>
-          <div
-            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
-          >
-            <h3 class="text-xl font-semibold mb-2">Bootcamp Training</h3>
-            <p>
-              Hands-on training in data science, Python, web development, and AI
-              tools.
+          <div>
+            <h4 class="text-xl font-bold text-teal-700 mb-2">
+              API Development
+            </h4>
+            <p class="text-gray-600">
+              Developing scalable APIs for integrating services and systems
+              efficiently using RESTful architecture.
             </p>
           </div>
         </div>
       </section>
 
+    
       <!-- Portfolio -->
-      <section
-        id="portfolio"
-        class="py-14 max-w-6xl mx-auto"
-        data-aos="fade-up"
-      >
-        <h2 class="text-3xl font-bold text-center mb-8">Our Portfolio</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-            <h3 class="text-xl font-semibold mb-2">
-              Human Trafficking AI Model
-            </h3>
-            <p>
-              Detecting coercion in trafficking reports using multi-label
-              classification.
-            </p>
-          </div>
-          <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-            <h3 class="text-xl font-semibold mb-2">UK House Price Predictor</h3>
-            <p>
-              A Streamlit app to forecast UK house prices using machine
-              learning.
-            </p>
-          </div>
-          <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-            <h3 class="text-xl font-semibold mb-2">
-              Property Management Portal
-            </h3>
-            <p>
-              A full-stack Django platform for efficient property management.
-            </p>
-          </div>
-        </div>
-      </section>
+<section id="projects" class="py-20 px-6 bg-gray-100 text-center">
+  <h3 class="text-4xl font-bold mb-12 text-gray-800">Featured Projects</h3>
+
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto text-left">
+
+  <!-- Project Card: Software Engineering Portfolio Website -->
+<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
+  <h4 class="text-xl font-semibold text-blue-700 mb-2">Software Engineering Portfolio Website</h4>
+  <p class="text-gray-700 mb-4">
+    A responsive personal portfolio website showcasing my software engineering projects. 
+    Designed and developed using HTML and CSS, with a clean user interface and smooth layout. 
+    Deployed via GitHub Pages for fast, reliable access.
+  </p>
+  <div class="flex flex-wrap gap-4">
+    <a href="https://github.com/Franklyn-SWE/portfolio" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
+      View on GitHub
+    </a>
+    <a href="https://franklyn-swe.github.io/portfolio/" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">
+      Visit Live Site
+    </a>
+  </div>
+</div>
+
+
+    <!-- Project 1 -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
+      <h4 class="text-xl font-semibold text-blue-700 mb-2">Human Trafficking Coercion Detection App</h4>
+      <p class="text-gray-600 mb-4">
+        A BERT-powered multi-label classification model designed to detect coercion indicators in human trafficking field reports. 
+        Integrated with a Gradio-based front-end, the tool enables NGOs to upload reports and identify potential signs of exploitation for improved decision-making and intervention.
+      </p>
+      <a href="https://github.com/Franklyn-SWE/coercion_multi_features_detection_app" target="_blank" class="inline-block text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
+        View on GitHub</a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
+      <h4 class="text-xl font-semibold text-blue-700 mb-2">UK House Price Predictor</h4>
+      <p class="text-gray-600 mb-4">
+        A machine learning app predicting UK property prices using location, type, and features.
+      </p>
+      <a href="https://github.com/Franklyn-SWE/Enhanced_UK_House_Price_Prediction_Model" target="_blank" class="inline-block text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition"
+      >View on GitHub</a>
+    </div>
+
+    <!-- Project Card: UK House Price Map -->
+<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
+  <h4 class="text-xl font-semibold text-blue-700 mb-2">UK House Price Map</h4>
+  <p class="text-gray-700 mb-4">
+    An interactive web application that visualizes average UK house prices by region. Built using a custom API for dynamic data retrieval and deployed via GitHub Pages. 
+    Ideal for property researchers, buyers, or investors seeking geographic price trends.
+  </p>
+  <div class="flex flex-wrap gap-4">
+    <a href="https://github.com/Franklyn-SWE/uk-house-price-map" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
+      View on GitHub
+    </a>
+    <a href="https://franklyn-swe.github.io/uk-house-price-map/" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">
+      Live Interactive Map
+    </a>
+  </div>
+</div>
+   <!-- Project Card: Mental Health Detection Web App -->
+<div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
+  <h4 class="text-xl font-semibold text-blue-700 mb-2">Mental Health Detection Web App</h4>
+  <p class="text-gray-600 mb-4">
+    A smart web application that detects potential signs of mental health issues based on user responses. 
+    Built using Django for backend logic and Bootstrap for responsive UI, the app supports early detection and encourages users to seek professional support.
+  </p>
+  <a href="https://github.com/Franklyn-SWE/Mental-Health-Detectting-Smart-App" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
+    View on GitHub
+  </a>
+</div>
+
+
+    <!-- Project Card: Customer Segmentation using Clustering -->
+<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
+  <h4 class="text-xl font-semibold text-blue-700 mb-2">Customer Segmentation using Clustering</h4>
+  <p class="text-gray-700 mb-4">
+    A machine learning model that segments customers into distinct groups based on behavioral and demographic data using clustering algorithms. 
+    This approach enables businesses to identify high-value segments and personalize marketing strategies for potential customers.
+  </p>
+  <a href="https://github.com/Franklyn-SWE/Customer_Segmentation_Clustering" target="_blank" class="inline-block text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
+    View on GitHub
+  </a>
+</div>
+
+<!-- Project Card: Netflix Movie Recommendation System -->
+<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
+  <h4 class="text-xl font-semibold text-blue-700 mb-2">Netflix Movie Recommendation System</h4>
+  <p class="text-gray-700 mb-4">
+    A content-based movie recommendation system that suggests films to users based on similarities in genres, descriptions, and metadata. 
+    Built using Python and machine learning techniques, it demonstrates the fundamentals of personalized content delivery for streaming platforms.
+  </p>
+  <a href="https://github.com/Franklyn-SWE/Netflix_Movies_Recommendation_System" target="_blank" class="inline-block text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
+    View on GitHub
+  </a>
+</div>
+
+
+    <!-- Project Card: MudiaTech YouTube Channel -->
+<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
+  <h4 class="text-xl font-semibold text-blue-700 mb-2">MudiaTech YouTube Channel</h4>
+  <p class="text-gray-700 mb-4">
+    My official YouTube channel (formerly Klynoldev), where I create educational videos on Python, SQL, Java, software engineering, and machine learning. 
+    The channel supports MudiaTech’s mission to make tech education and AI solutions more accessible.
+  </p>
+  <a href="https://youtube.com/@mudiaTech" target="_blank" class="inline-block text-sm text-white bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition">
+    Visit Channel
+  </a>
+</div>
+
+    <!-- Project 6 -->
+    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
+      <h4 class="text-xl font-semibold text-blue-700 mb-2">Mudiatech Business Website</h4>
+      <p class="text-gray-600 mb-4">
+       A professional and scalable company website built with HTML and CSS, designed to evolve into a full Django web application. 
+       It showcases MudiaTech’s services in AI, software development, and data-driven solutions.
+      </p>
+      <a href="https://github.com/Franklyn-SWE/mudiatech-site" target="_blank" class="text-blue-500 hover:underline text-sm">View GitHub</a>
+    </div>
+  </div>
+
+  <div class="mt-12">
+    <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
+      Let’s Work Together
+    </a>
+  </div>
+
+  <!-- About the Founder & Team -->
+<!-- About the Founder & Team -->
+<section id="about" class="py-16 px-6 bg-white text-center">
+  <h3 class="text-3xl font-semibold mb-12 text-gray-800">Meet the Founder</h3>
+
+  <div class="max-w-4xl mx-auto md:flex items-center text-left space-y-8 md:space-y-0 md:space-x-10">
+    <!-- Founder Image -->
+    <img
+      src="assets/unnamed.jpg"
+      alt="Franklyn Oliha"
+      class="w-48 h-48 rounded-full object-cover mx-auto md:mx-0 shadow-md"
+    />
+
+    <!-- Founder Bio -->
+    <div>
+      <h4 class="text-2xl font-bold text-blue-700">Franklyn Oliha</h4>
+      <p class="text-sm text-gray-500 mb-2">
+        MSc Data Science & Machine Learning · BEng (Hons) Software Engineering
+      </p>
+      <p class="text-gray-700 leading-relaxed">
+        I’m a British Graduate Software Engineer, Data Scientist, and Machine Learning Engineer with a strong passion for solving real-world problems through technology. 
+        With academic excellence and hands-on experience in AI, data science, and full-stack development, I founded <strong>MudiaTech</strong> to empower businesses and NGOs with intelligent, scalable digital solutions.
+      </p>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="mt-16">
+    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Team</h3>
+    <p class="max-w-2xl mx-auto text-gray-600">
+      At <strong>MudiaTech</strong>, we collaborate with a growing network of passionate developers,
+      designers, and data professionals — all committed to building ethical, impactful, and forward-thinking solutions that drive meaningful change.
+    </p>
+  </div>
+</section>
+
+
+</section>
+
 
       <!-- Contact -->
-      <section
-        id="contact"
-        class="py-14 bg-gray-100 dark:bg-gray-800 rounded-lg max-w-xl mx-auto"
-        data-aos="fade-up"
-      >
-        <h2 class="text-3xl font-bold text-center mb-6">Get in Touch</h2>
-        <form
-          action="https://formspree.io/f/xgvzawve"
-          method="POST"
-          class="grid gap-4"
-        >
-          <input
-            type="hidden"
-            name="_next"
-            value="https://mudiatech.co.uk/thank-you.html"
-          />
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            class="p-3 rounded-md bg-white dark:bg-gray-700 border focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            class="p-3 rounded-md bg-white dark:bg-gray-700 border focus:outline-none focus:ring-2 focus:ring-blue-600"
-          />
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-            class="p-3 rounded-md bg-white dark:bg-gray-700 border focus:outline-none focus:ring-2 focus:ring-blue-600"
-          ></textarea>
-          <button
-            type="submit"
-            class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold transition"
-          >
-            Send Message
-          </button>
-        </form>
-        <p class="text-center mt-4">
-          Or email us directly at
-          <a href="mailto:contact@mudiatech.co.uk" class="underline"
-            >contact@mudiatech.co.uk</a
-          >
-        </p>
-      </section>
-    </main>
+      <section id="contact" class="py-20 px-6 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-2xl mx-auto">
+    <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">Get in Touch</h2>
+    <p class="text-center text-gray-600 dark:text-gray-300 mb-10">
+      We'd love to hear from you. Send us a message or email us directly.
+    </p>
 
-    <!-- Footer -->
-    <footer class="bg-blue-600 dark:bg-blue-900 text-white py-6 text-center">
-      <p>© 2025 MudiaTech Limited. All rights reserved.</p>
-      <div class="mt-3 flex justify-center space-x-6 text-lg">
-        <a
-          href="https://linkedin.com/in/franklyn-oliha/"
-          target="_blank"
-          class="hover:text-blue-300"
-          aria-label="LinkedIn"
-          >LinkedIn</a
-        >
-        <a
-          href="https://github.com/Franklyn-SWE"
-          target="_blank"
-          class="hover:text-blue-300"
-          aria-label="GitHub"
-          >GitHub</a
-        >
-        <a
-          href="https://youtube.com/@klynoldev"
-          target="_blank"
-          class="hover:text-red-300"
-          aria-label="YouTube"
-          >YouTube</a
-        >
+    <form
+      action="https://formspree.io/f/xgvzawve"
+      method="POST"
+      class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 md:p-8 grid gap-5"
+    >
+      <input
+        type="hidden"
+        name="_next"
+        value="https://mudiatech.co.uk/thank-you.html"
+      />
+
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Name</label>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Your full name"
+          required
+          class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        />
       </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Email</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+          class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        />
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message here..."
+          required
+          class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold transition"
+      >
+        Send Message
+      </button>
+    </form>
+
+    <div class="text-center mt-6 text-gray-600 dark:text-gray-300">
+      Or email us directly at
+      <a href="mailto:contact@mudiatech.co.uk" class="text-blue-600 underline hover:text-blue-800">
+        contact@mudiatech.co.uk
+      </a>
+    </div>
+  </div>
+</section>
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent default form submission
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        alert("Thank you! Your message has been sent.");
+        form.reset(); // Clear the form fields
+      } else {
+        alert("Oops! Something went wrong.");
+      }
+    } catch (error) {
+      alert("Error submitting form.");
+    }
+  });
+</script>
+
+   
+    <!-- Footer -->
+   <footer class="bg-blue-600 dark:bg-blue-900 text-white py-8">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <div class="mt-4 flex justify-center space-x-6 text-2xl">
+      <a
+        href="https://linkedin.com/in/franklyn-oliha/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-blue-300 transition"
+        aria-label="LinkedIn"
+      >
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a
+        href="https://github.com/Franklyn-SWE"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-blue-300 transition"
+        aria-label="GitHub"
+      >
+        <i class="fab fa-github"></i>
+      </a>
+      <a
+        href="https://youtube.com/@klynoldev"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:text-red-400 transition"
+        aria-label="YouTube"
+      >
+        <i class="fab fa-youtube"></i>
+      </a>
+    </div>
+
+    <p class="mt-4 text-sm text-gray-200">
+      Crafted with <span class="text-red-400">❤️</span> by <span class="font-medium">Franklyn Oliha</span>
+    </p>
+  </div>
+</footer>
+
+
+
+    <footer class="py-6 text-center bg-gray-800 text-gray-300 text-sm">
+      &copy; 2025 MudiaTech. All rights reserved.
     </footer>
 
     <!-- JavaScript -->
@@ -253,5 +456,7 @@
         }
       });
     </script>
+
+    
   </body>
 </html>
