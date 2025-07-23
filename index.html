@@ -2,317 +2,244 @@
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MudiaTech</title>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         darkMode: "class",
       };
     </script>
-    <style>
-      /* Optional: transition for smooth background/text color changes */
-      html {
-        transition: background-color 0.3s, color 0.3s;
-      }
-    </style>
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="MudiaTech is a UK-based tech company delivering AI, software engineering, and data solutions."
+    />
+    <meta
+      name="keywords"
+      content="MudiaTech, AI, Data Science, Software Engineering, UK Tech Company"
+    />
+    <meta name="author" content="Franklyn Oliha" />
   </head>
 
   <body
-    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500 font-sans"
+    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-500"
   >
     <!-- Header -->
-    <!-- Header -->
     <header
-      class="relative text-center py-12 bg-gradient-to-r from-teal-600 to-cyan-700 dark:from-teal-900 dark:to-cyan-900 text-white shadow-lg"
+      class="flex items-center justify-between px-8 py-6 bg-gradient-to-r from-teal-600 to-cyan-700 text-white shadow-lg"
     >
-      <!-- Company Name -->
-      <h1
-        class="text-5xl font-extrabold tracking-wide drop-shadow-lg font-sans"
-      >
-        MudiaTech
-      </h1>
+      <!-- Left: Logo + Title -->
+      <div class="flex items-center space-x-4">
+        <img src="assets/logo2.png" alt="MudiaTech Logo" class="h-12 w-auto" />
+        <h1 class="text-3xl font-bold tracking-tight">MudiaTech</h1>
+      </div>
 
-      <!-- Subheading with bullets -->
-      <h2
-        class="mt-4 flex justify-center items-center space-x-3 text-lg font-semibold text-indigo-200 dark:text-indigo-400"
-      >
-        <span>Innovative AI</span>
-        <span class="text-indigo-500 dark:text-indigo-400 text-xl">•</span>
-        <span>Software Engineering</span>
-        <span class="text-indigo-500 dark:text-indigo-400 text-xl">•</span>
-        <span>Data-Driven Solutions</span>
-      </h2>
-
-      <!-- Navigation -->
-      <nav class="mt-8 flex justify-evenly max-w-4xl mx-auto space-x-4">
-        <a
-          href="#about"
-          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
-          >About</a
-        >
-        <a
-          href="#services"
-          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
-          >Services</a
-        >
-        <a
-          href="#portfolio"
-          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
-          >Portfolio</a
-        >
-        <a
-          href="#contact"
-          class="px-5 py-2 bg-indigo-600 rounded-md text-white font-medium hover:bg-indigo-700 transition"
-          >Contact</a
-        >
+      <!-- Right: Navigation -->
+      <nav class="flex space-x-6">
+        <a href="#about" class="hover:underline text-lg">About</a>
+        <a href="#services" class="hover:underline text-lg">Services</a>
+        <a href="#portfolio" class="hover:underline text-lg">Portfolio</a>
+        <a href="#contact" class="hover:underline text-lg">Contact</a>
       </nav>
-
-      <!-- Dark Mode Toggle -->
-      <button
-        id="theme-toggle"
-        aria-label="Toggle Dark Mode"
-        title="Toggle Dark Mode"
-        class="absolute top-4 right-4 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md hover:ring-2 hover:ring-blue-400 transition"
-      >
-        <span
-          id="toggle-icon"
-          class="text-gray-900 dark:text-yellow-400 text-xl"
-          >🌙</span
-        >
-      </button>
     </header>
 
-    <!-- About -->
-    <section id="about" class="px-6 py-10 text-center max-w-4xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-4">About Us</h2>
-      <p>
-        MudiaTech is a UK-based tech company delivering AI, software
-        development, and educational training solutions to empower individuals
-        and businesses with modern tools.
-      </p>
-    </section>
-
-    <!-- Services -->
-    <section
-      id="services"
-      class="bg-gray-100 dark:bg-gray-800 px-6 py-10 max-w-6xl mx-auto rounded-lg shadow-lg"
-    >
-      <h2 class="text-3xl font-semibold mb-6 text-center">Our Services</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div
-          class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2">AI Model Development</h3>
-          <p>
-            We build intelligent models to solve real-world problems in health,
-            crime, property, and more.
-          </p>
-        </div>
-        <div
-          class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2">Web & App Development</h3>
-          <p>
-            Custom software, websites, and mobile apps built with modern tech
-            stacks.
-          </p>
-        </div>
-        <div
-          class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
-        >
-          <h3 class="text-xl font-bold mb-2">Bootcamp Training</h3>
-          <p>
-            Training for beginners and professionals in data science, web
-            development, and AI tools.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section id="portfolio" class="px-6 py-10 max-w-6xl mx-auto">
-      <h2 class="text-3xl font-semibold mb-6 text-center">Our Portfolio</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Human Trafficking Model</h3>
-          <p>
-            Multi-label AI model for detecting coercion in trafficking reports.
-          </p>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">UK House Price Predictor</h3>
-          <p>Streamlit app to predict UK house prices using ML.</p>
-        </div>
-        <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
-          <h3 class="text-xl font-semibold mb-2">Property Management Portal</h3>
-          <p>A full-stack Django platform for managing rental properties.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section
-      id="contact"
-      class="bg-gray-100 dark:bg-gray-800 px-6 py-10 max-w-xl mx-auto rounded-lg shadow-lg"
-    >
-      <h2 class="text-3xl font-semibold mb-6 text-center">Contact Us</h2>
-      <form
-        class="grid gap-4"
-        action="https://formspree.io/f/xgvzawve"
-        method="POST"
+    <!-- Main Content -->
+    <main class="px-6">
+      <!-- About -->
+      <section
+        id="about"
+        class="max-w-4xl mx-auto py-14 text-center"
+        data-aos="fade-up"
       >
-        <!-- redirect -->
-        <input
-          type="hidden"
-          name="_next"
-          value="https://mudiatech.co.uk/thank-you.html"
-        />
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p>
+          MudiaTech is a UK-based technology company delivering intelligent
+          solutions across AI, web development, and tech education. We help
+          businesses innovate with cutting-edge tools and strategies.
+        </p>
+      </section>
 
-        <!-- rest of form -->
-        ...
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          class="p-3 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          class="p-3 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        />
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-          class="p-3 rounded-md bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        ></textarea>
-        <button
-          type="submit"
-          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-md transition"
+      <!-- Services -->
+      <section
+        id="services"
+        class="bg-gray-100 dark:bg-gray-800 py-14 rounded-lg max-w-6xl mx-auto"
+        data-aos="fade-up"
+      >
+        <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">AI Model Development</h3>
+            <p>
+              Custom ML models for solving problems in healthcare, crime, real
+              estate, and more.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Web & App Development</h3>
+            <p>
+              Responsive, scalable web and mobile applications tailored for your
+              needs.
+            </p>
+          </div>
+          <div
+            class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow hover:shadow-xl transition"
+          >
+            <h3 class="text-xl font-semibold mb-2">Bootcamp Training</h3>
+            <p>
+              Hands-on training in data science, Python, web development, and AI
+              tools.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio -->
+      <section
+        id="portfolio"
+        class="py-14 max-w-6xl mx-auto"
+        data-aos="fade-up"
+      >
+        <h2 class="text-3xl font-bold text-center mb-8">Our Portfolio</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">
+              Human Trafficking AI Model
+            </h3>
+            <p>
+              Detecting coercion in trafficking reports using multi-label
+              classification.
+            </p>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">UK House Price Predictor</h3>
+            <p>
+              A Streamlit app to forecast UK house prices using machine
+              learning.
+            </p>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-700 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2">
+              Property Management Portal
+            </h3>
+            <p>
+              A full-stack Django platform for efficient property management.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section
+        id="contact"
+        class="py-14 bg-gray-100 dark:bg-gray-800 rounded-lg max-w-xl mx-auto"
+        data-aos="fade-up"
+      >
+        <h2 class="text-3xl font-bold text-center mb-6">Get in Touch</h2>
+        <form
+          action="https://formspree.io/f/xgvzawve"
+          method="POST"
+          class="grid gap-4"
         >
-          Send Message
-        </button>
-      </form>
-      <p class="mt-4 text-center">
-        Or email us directly at
-        <a href="mailto:contact@mudiatech.co.uk" class="underline">
-          contact@mudiatech.co.uk
-        </a>
-      </p>
-    </section>
-
-    <!-- Visual Analytics Section -->
-    <!--- here ...-->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://mudiatech.co.uk/thank-you.html"
+          />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="p-3 rounded-md bg-white dark:bg-gray-700 border focus:outline-none focus:ring-2 focus:ring-blue-600"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            class="p-3 rounded-md bg-white dark:bg-gray-700 border focus:outline-none focus:ring-2 focus:ring-blue-600"
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+            class="p-3 rounded-md bg-white dark:bg-gray-700 border focus:outline-none focus:ring-2 focus:ring-blue-600"
+          ></textarea>
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold transition"
+          >
+            Send Message
+          </button>
+        </form>
+        <p class="text-center mt-4">
+          Or email us directly at
+          <a href="mailto:contact@mudiatech.co.uk" class="underline"
+            >contact@mudiatech.co.uk</a
+          >
+        </p>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-blue-600 dark:bg-blue-900 text-white py-6 text-center">
       <p>© 2025 MudiaTech Limited. All rights reserved.</p>
       <div class="mt-3 flex justify-center space-x-6 text-lg">
-        <!-- Twitter Icon -->
         <a
-          href="#"
+          href="https://linkedin.com/in/franklyn-oliha/"
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Twitter"
           class="hover:text-blue-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-          >
-            <path
-              d="M23.954 4.569a10 10 0 01-2.825.775 4.93 4.93 0 002.163-2.724 9.863 9.863 0 01-3.127 1.195 4.917 4.917 0 00-8.38 4.482A13.945 13.945 0 011.671 3.149a4.822 4.822 0 001.523 6.574 4.904 4.904 0 01-2.229-.616c-.054 2.28 1.581 4.415 3.949 4.89a4.996 4.996 0 01-2.224.085 4.936 4.936 0 004.604 3.417A9.867 9.867 0 010 19.54a13.905 13.905 0 007.548 2.209c9.142 0 14.307-7.721 13.995-14.646a9.936 9.936 0 002.411-2.535z"
-            />
-          </svg>
-        </a>
-
-        <!-- LinkedIn Icon -->
-        <a
-          href="https://www.linkedin.com/in/franklyn-oliha/"
-          target="_blank"
-          rel="noopener noreferrer"
           aria-label="LinkedIn"
-          class="hover:text-blue-300"
+          >LinkedIn</a
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-          >
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.039-1.852-3.039-1.853 0-2.136 1.445-2.136 2.939v5.669H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.852 3.368-1.852 3.6 0 4.266 2.37 4.266 5.452v6.291zM5.337 7.433a2.07 2.07 0 11-.001-4.14 2.07 2.07 0 010 4.14zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.224.792 24 1.771 24h20.451c.98 0 1.778-.776 1.778-1.729V1.729C24 .774 23.203 0 22.225 0z"
-            />
-          </svg>
-        </a>
-
-        <!-- GitHub Icon -->
         <a
           href="https://github.com/Franklyn-SWE"
           target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub"
           class="hover:text-blue-300"
+          aria-label="GitHub"
+          >GitHub</a
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-            class="w-6 h-6"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M8 0C3.58 0 0 3.58 0 8a8 8 0 005.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.22 2.2.82a7.63 7.63 0 012-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.15.46.55.38A8 8 0 0016 8c0-4.42-3.58-8-8-8z"
-            />
-          </svg>
-        </a>
-
-        <!-- YouTube Icon -->
         <a
-          href="#"
+          href="https://youtube.com/@klynoldev"
           target="_blank"
-          rel="noopener noreferrer"
+          class="hover:text-red-300"
           aria-label="YouTube"
-          class="hover:text-red-600"
+          >YouTube</a
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-            class="w-6 h-6"
-          >
-            <path
-              d="M23.499 6.203a2.994 2.994 0 00-2.108-2.116C19.577 3.5 12 3.5 12 3.5s-7.577 0-9.391.587a2.994 2.994 0 00-2.108 2.116A31.207 31.207 0 000 12a31.207 31.207 0 00.501 5.797 2.994 2.994 0 002.108 2.116C4.423 20.5 12 20.5 12 20.5s7.577 0 9.391-.587a2.994 2.994 0 002.108-2.116A31.207 31.207 0 0024 12a31.207 31.207 0 00-.501-5.797zM9.546 15.568V8.432l6.545 3.568-6.545 3.568z"
-            />
-          </svg>
-        </a>
       </div>
     </footer>
 
-    <!-- Dark mode toggle script -->
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
+      AOS.init();
+
       const toggleBtn = document.getElementById("theme-toggle");
       const toggleIcon = document.getElementById("toggle-icon");
       const htmlEl = document.documentElement;
 
-      // Initialize from localStorage
       if (
         localStorage.getItem("theme") === "dark" ||
         (!("theme" in localStorage) &&
           window.matchMedia("(prefers-color-scheme: dark)").matches)
       ) {
         htmlEl.classList.add("dark");
-        toggleIcon.textContent = "☀️"; // sun icon for dark mode active
+        toggleIcon.textContent = "☀️";
       } else {
-        toggleIcon.textContent = "🌙"; // moon icon for light mode active
+        toggleIcon.textContent = "🌙";
       }
 
       toggleBtn.addEventListener("click", () => {
