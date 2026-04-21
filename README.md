@@ -32,9 +32,9 @@ This release includes final production polish and deployment readiness updates:
 From the project root:
 
 1. Start a local server
-	- python -m http.server 3000
+   - `python -m http.server 3000`
 2. Open in browser
-	- http://localhost:3000/
+   - `http://localhost:3000/`
 
 ## Deployment Notes
 - Primary hosting: Netlify
