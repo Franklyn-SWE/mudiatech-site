@@ -136,7 +136,7 @@ textarea:focus {
 
 /* Trust strip separators hide on very small screens */
 @media (max-width: 480px) {
-  #stickyCTA span {
+  .sticky-cta-label {
     display: none;
   }
 }
