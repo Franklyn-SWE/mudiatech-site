@@ -15,14 +15,8 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        // Show success message
-        alert("Thank you! Your message has been sent successfully.");
         contactForm.reset();
-
-        // Optional: Redirect to thank you page
-        // setTimeout(() => {
-        //   window.location.href = 'thank-you.html';
-        // }, 1000);
+        window.location.href = "thank-you.html";
       } else {
         alert("Oops! Something went wrong. Please try again.");
       }
