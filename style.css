@@ -122,3 +122,21 @@ img {
     transition: none !important;
   }
 }
+
+/* Sticky CTA: hide when user is near top of page (handled by JS) */
+#stickyCTA {
+  will-change: transform, opacity;
+}
+
+/* Enhanced form input focus glow */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+/* Trust strip separators hide on very small screens */
+@media (max-width: 480px) {
+  #stickyCTA span {
+    display: none;
+  }
+}

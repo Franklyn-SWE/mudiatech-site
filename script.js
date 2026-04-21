@@ -60,6 +60,30 @@ if (siteNav) {
 
 // Mobile nav menu toggle
 const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+
+// Sticky CTA: show after scrolling past hero
+const stickyCTA = document.getElementById("stickyCTA");
+if (stickyCTA) {
+  const toggleStickyCTA = () => {
+    if (window.scrollY > 420) {
+      stickyCTA.style.opacity = "1";
+      stickyCTA.style.pointerEvents = "auto";
+      stickyCTA.style.transform = "translateY(0)";
+    } else {
+      stickyCTA.style.opacity = "0";
+      stickyCTA.style.pointerEvents = "none";
+      stickyCTA.style.transform = "translateY(12px)";
+    }
+  };
+  // Start hidden
+  stickyCTA.style.opacity = "0";
+  stickyCTA.style.pointerEvents = "none";
+  stickyCTA.style.transform = "translateY(12px)";
+  stickyCTA.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+  window.addEventListener("scroll", toggleStickyCTA, { passive: true });
+  toggleStickyCTA();
+}
+
 const mobileMenu = document.getElementById("mobileMenu");
 
 if (mobileMenuToggle && mobileMenu) {
