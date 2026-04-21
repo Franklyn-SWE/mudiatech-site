@@ -1,513 +1,1258 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+﻿<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MudiaTech</title>
-
-     <!-- Canonical Tag -->
-    <link rel="canonical" href="https://www.mudiatech.co.uk/" />
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-      };
-    </script>
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link rel="icon" href="/favicon.ico" />
-
-    <!-- SEO Meta Tags -->
+    <title>MudiaTech | AI Automation &amp; Software Solutions</title>
     <meta
       name="description"
-      content="MudiaTech is a UK-based tech company delivering AI, software engineering, and data solutions."
+      content="MudiaTech designs and deploys AI-powered solutions for startups, businesses, and organisations — from intelligent automation to scalable software and machine learning systems."
     />
-    <meta
-      name="keywords"
-      content="MudiaTech, AI, Data Science, Software Engineering, UK Tech Company"
+    <meta name="theme-color" content="#D4AF37" />
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <meta name="author" content="Franklyn Oliha" />
-
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-C7RY96N830"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-C7RY96N830');
-</script>
-
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/logo7.1.png" />
   </head>
-
-  <body
-    class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 font-sans transition-colors duration-500"
-  >
-    <!-- Header -->
-    <header
-      class="flex flex-col md:flex-row items-center justify-between px-6 py-4 bg-gradient-to-r from-teal-600 to-cyan-700 text-white shadow-md space-y-4 md:space-y-0"
+  <body class="bg-[#0B0B0B] text-white antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav
+      id="siteNav"
+      class="bg-[#0B0B0B]/90 border-b border-white/10 sticky top-0 z-50 transition-all duration-300"
     >
-      <div class="flex items-center space-x-3">
-        <img src="assets/logo2.png" alt="MudiaTech Logo" class="h-10 w-auto" />
-        <h1 class="text-2xl font-bold">MudiaTech</h1>
-      </div>
-      <nav class="flex flex-wrap justify-center md:justify-end gap-4">
-        <a href="#home" class="hover:underline">Home</a>
-        <a href="#team" class="hover:underline">TEAM</a>
-        <a href="#about" class="hover:underline">ABOUT US</a>
-        <a href="#services" class="hover:underline">SERVICES</a>
-        <a href="#projects" class="hover:underline">PROJECTS</a>
-        <a href="#contact" class="hover:underline">CONTACT</a>
-      </nav>
-    </header>
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center gap-3"
+      >
+        <div class="flex items-center space-x-3">
+          <img
+            src="assets/logo7.1.png"
+            alt="MudiaTech Logo"
+            width="32"
+            height="32"
+            loading="eager"
+            decoding="async"
+            class="h-8 w-8 rounded"
+          />
+          <span class="text-lg sm:text-xl font-bold text-[#D4AF37]"
+            >MudiaTech</span
+          >
+        </div>
+        <ul class="hidden md:flex items-center space-x-8">
+          <li>
+            <a
+              href="#about"
+              class="text-white/70 hover:text-[#D4AF37] transition text-sm font-medium"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="text-white/70 hover:text-[#D4AF37] transition text-sm font-medium"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="text-white/70 hover:text-[#D4AF37] transition text-sm font-medium"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <a
+          href="https://calendly.com/olihafosa/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hidden md:inline-flex bg-[#D4AF37] text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#E6C766] transition focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-[#0B0B0B]"
+        >
+          Book a Call
+        </a>
 
-    <!-- Home -->
-    <section id="home" class="text-center py-20 px-6 bg-white">
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
-        Empowering Innovation with Software, Data & AI
-      </h2>
-      <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-        MudiaTech delivers high-quality digital solutions — from web application development 
-        to scalable APIs and intelligent machine learning models, tailored for startups, businesses, and organizations.
-      </p>
+        <button
+          id="mobileMenuToggle"
+          type="button"
+          class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-white/15 text-white/80 hover:text-[#D4AF37] hover:border-[#D4AF37]/40 transition"
+          aria-label="Toggle navigation"
+          aria-controls="mobileMenu"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1">
+          <a
+            href="#about"
+            class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm text-white/80 hover:text-[#D4AF37] hover:bg-white/[0.03] transition"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm text-white/80 hover:text-[#D4AF37] hover:bg-white/[0.03] transition"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="mobile-nav-link rounded-lg px-3 py-2.5 text-sm text-white/80 hover:text-[#D4AF37] hover:bg-white/[0.03] transition"
+            >Contact</a
+          >
+          <a
+            href="https://calendly.com/olihafosa/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 inline-flex justify-center bg-[#D4AF37] text-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#E6C766] transition"
+            >Book a Call</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-[#0B0B0B] py-24 md:py-36 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_#D4AF3720_0%,_transparent_62%)] pointer-events-none"
+      ></div>
+      <div
+        class="absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] bg-[#D4AF37]/10 blur-3xl rounded-full pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-1/3 -left-24 w-64 h-64 bg-[#D4AF37]/5 blur-3xl rounded-full pointer-events-none"
+      ></div>
+      <div class="relative max-w-7xl mx-auto px-4 text-center">
+        <div
+          class="inline-flex items-center bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-full px-4 py-1.5 mb-8"
+        >
+          <span
+            class="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase"
+            >AI &amp; Automation</span
+          >
+        </div>
+        <h1
+          class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-4xl mx-auto"
+        >
+          Build AI Systems That
+          <span class="text-[#D4AF37]">Automate, Scale,</span
+          ><br class="hidden md:block" />
+          and Drive Business Growth
+        </h1>
+        <p
+          class="text-white/55 text-base sm:text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed"
+        >
+          MudiaTech designs and deploys AI-powered solutions for startups,
+          businesses, and organisations &mdash; from intelligent automation to
+          scalable software and machine learning systems.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://calendly.com/olihafosa/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full sm:w-auto bg-[#D4AF37] text-black px-8 py-3.5 rounded-full font-semibold hover:bg-[#E6C766] transition text-sm"
+          >
+            Book a Free Consultation
+          </a>
+          <a
+            href="#selected-work"
+            class="w-full sm:w-auto border border-[#D4AF37]/30 text-white px-8 py-3.5 rounded-full font-semibold hover:text-[#D4AF37] hover:border-[#D4AF37]/60 transition text-sm"
+          >
+            View Our Work
+          </a>
+        </div>
+      </div>
     </section>
 
-    <main class="px-6">
-      <!-- About Us -->
-      <section id="about" class="py-16 px-6 bg-gray-50 text-center">
-        <h3 class="text-3xl font-semibold mb-4 text-gray-800">About Us</h3>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          MudiaTech is a UK-based technology company passionate about building
-          digital tools and AI-powered solutions. We specialize in creating
-          robust software systems, machine learning models, and data pipelines
-          that solve real-world problems.
-        </p>
-      </section>
+    <!-- Live AI Product Demo -->
+    <section class="py-20 bg-[#0B0B0B]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Live AI Product Demo
+          </h2>
+          <p class="text-white/55 max-w-3xl mx-auto text-sm md:text-base">
+            Explore a real AI system built to automate content creation and
+            scale social media output.
+          </p>
+        </div>
 
-      <!-- Services -->
-      <section id="services" class="py-16 px-6 bg-white text-center">
-        <h3 class="text-3xl font-semibold mb-8 text-gray-800">Our Services</h3>
-        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-left">
-          <div>
-            <h4 class="text-xl font-bold text-teal-700 mb-2">
-              Web & App Development
-            </h4>
-            <p class="text-gray-600">
-              <i>We build responsive, scalable websites and applications using modern web frameworks to meet business needs and user expectations.
-              Our expertise includes full-stack development, RESTful APIs, and cloud deployment, ensuring your digital presence is robust and future-proof.</i>
+        <div
+          class="featured-demo-shell rounded-2xl p-[1px] bg-[linear-gradient(135deg,rgba(212,175,55,0.45),rgba(255,255,255,0.10),rgba(212,175,55,0.25))]"
+        >
+          <div
+            class="featured-demo-card rounded-2xl border border-white/10 bg-[#111111] p-7 md:p-10 grid md:grid-cols-2 gap-8 md:gap-10 items-center text-center md:text-left transition-all duration-300"
+          >
+            <div>
+              <span
+                class="inline-flex items-center rounded-full border border-emerald-400/35 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-emerald-300 mb-4"
+                >LIVE DEMO</span
+              >
+              <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                AI Video Automation System
+              </h3>
+              <p
+                class="text-white/55 text-sm md:text-base leading-relaxed mb-6"
+              >
+                Transform one long video into 10+ short clips automatically.
+                This system extracts key moments, generates captions, and
+                prepares content for social media - no editing required.
+              </p>
+
+              <div
+                class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mb-3"
+              >
+                <a
+                  href="https://mudiatech-video-automation.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex justify-center bg-[#D4AF37] text-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#E6C766] transition"
+                  >View Demo</a
+                >
+                <a
+                  href="https://mudiatech-video-automation.vercel.app/#early-access-form"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex justify-center border border-[#D4AF37]/30 text-white px-6 py-3 rounded-full text-sm font-semibold hover:text-[#D4AF37] hover:border-[#D4AF37]/60 transition"
+                  >Get Early Access</a
+                >
+              </div>
+
+              <p class="text-white/40 text-xs mb-4">
+                Join early users &bull; Founder pricing &bull; Limited spots
+              </p>
+
+              <div class="flex flex-wrap justify-center md:justify-start gap-2">
+                <span
+                  class="text-xs text-white/70 border border-white/15 rounded-full px-3 py-1"
+                  >YouTube Shorts</span
+                >
+                <span
+                  class="text-xs text-white/70 border border-white/15 rounded-full px-3 py-1"
+                  >TikTok</span
+                >
+                <span
+                  class="text-xs text-white/70 border border-white/15 rounded-full px-3 py-1"
+                  >Instagram Reels</span
+                >
+                <span
+                  class="text-xs text-white/70 border border-white/15 rounded-full px-3 py-1"
+                  >Facebook Reels</span
+                >
+              </div>
+            </div>
+
+            <div class="w-full max-w-md mx-auto md:mx-0 md:ml-auto">
+              <div
+                class="rounded-xl border border-white/10 bg-[linear-gradient(165deg,rgba(212,175,55,0.14),rgba(17,17,17,1)_35%)] p-5"
+              >
+                <div class="flex items-center justify-between mb-4">
+                  <span
+                    class="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase"
+                    >Demo Preview</span
+                  >
+                  <i class="fas fa-circle-play text-[#D4AF37]"></i>
+                </div>
+                <div class="space-y-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-xs text-white/60 border border-white/10 rounded-lg px-3 py-2"
+                  >
+                    <span>Clip Extraction</span>
+                    <span class="text-emerald-300">Automated</span>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-xs text-white/60 border border-white/10 rounded-lg px-3 py-2"
+                  >
+                    <span>Caption Generation</span>
+                    <span class="text-emerald-300">AI Powered</span>
+                  </div>
+                  <div
+                    class="flex items-center justify-between text-xs text-white/60 border border-white/10 rounded-lg px-3 py-2"
+                  >
+                    <span>Social Formatting</span>
+                    <span class="text-emerald-300">Multi-Platform</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-[#111111]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">About MudiaTech</h2>
+          <p class="text-white/50 max-w-xl mx-auto text-sm leading-relaxed">
+            Built to deliver measurable outcomes through AI and intelligent
+            software engineering.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-[#171717] border border-white/10 rounded-2xl p-8">
+            <h3 class="text-lg font-semibold mb-4 text-[#D4AF37]">
+              Our Mission
+            </h3>
+            <p class="text-white/55 leading-relaxed text-sm mb-4">
+              We design practical AI systems that create measurable business
+              impact.
+            </p>
+            <ul class="space-y-2 text-white/55 text-sm">
+              <li class="flex items-center gap-2">
+                <i class="fas fa-dot-circle text-[#D4AF37] text-[10px]"></i>
+                Automate repetitive operations
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fas fa-dot-circle text-[#D4AF37] text-[10px]"></i>
+                Build software that scales with demand
+              </li>
+            </ul>
+          </div>
+          <div class="bg-[#171717] border border-white/10 rounded-2xl p-8">
+            <h3 class="text-lg font-semibold mb-4 text-[#D4AF37]">
+              Why Choose Us
+            </h3>
+            <ul class="text-white/55 space-y-3 text-sm">
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-[#D4AF37] text-xs"></i> AI-first
+                engineering approach
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-[#D4AF37] text-xs"></i> End-to-end
+                system delivery
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-[#D4AF37] text-xs"></i>
+                Outcome-focused solutions
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-check text-[#D4AF37] text-xs"></i> Ongoing
+                strategic support
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-[#0B0B0B]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-14">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+          <p class="text-white/50 max-w-xl mx-auto text-sm leading-relaxed">
+            AI solutions built to solve real business problems and deliver
+            measurable ROI.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="service-card group bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-robot text-[#D4AF37] text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3">AI Automation Systems</h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-4">
+              Replace repetitive workflows with intelligent automation. Save
+              time, reduce errors, and scale operations without scaling
+              headcount.
+            </p>
+            <p class="text-[#D4AF37] text-xs uppercase tracking-wider">
+              Outcome: Faster delivery, lower operational cost
             </p>
           </div>
-          <div>
-            <h4 class="text-xl font-bold text-teal-700 mb-2">
-              Data Science & AI
-            </h4>
-            <p class="text-gray-600">
-              <i>We develop intelligent, data-driven solutions to help businesses unlock insights and automate decision-making. 
-              Our expertise includes predictive analytics, natural language processing (NLP), data visualisation, sentiment analysis,
-              and custom machine learning models-turning complex data into actionable value.</i>
+          <div
+            class="service-card group bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-code text-[#D4AF37] text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3">
+              AI-Powered Software Development
+            </h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-4">
+              Custom software built with AI at the core — from intelligent
+              dashboards to fully autonomous backend systems that adapt and
+              learn.
+            </p>
+            <p class="text-[#D4AF37] text-xs uppercase tracking-wider">
+              Outcome: Smarter products, higher customer value
             </p>
           </div>
-          <div>
-            <h4 class="text-xl font-bold text-teal-700 mb-2">
-              Software Engineering
-            </h4>
-            <p class="text-gray-600">
-              <i>We apply industry-standard engineering practices such as clean architecture,
-              testing, version control, continuous integration and delivery (CI/CD), and 
-              performance optimization to ensure your product is reliable, maintainable, and scalable.</i>
+          <div
+            class="service-card group bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div
+              class="w-12 h-12 bg-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-chart-line text-[#D4AF37] text-xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold mb-3">
+              Data Science &amp; Machine Learning
+            </h3>
+            <p class="text-white/50 text-sm leading-relaxed mb-4">
+              Turn raw data into predictive insight. We build ML pipelines,
+              forecasting models, and analytics systems that power smarter
+              decisions.
+            </p>
+            <p class="text-[#D4AF37] text-xs uppercase tracking-wider">
+              Outcome: Better decisions, predictable growth
             </p>
           </div>
         </div>
-      </section>
-
-    
-      <!-- Portfolio -->
-<section id="projects" class="py-20 px-6 bg-gray-100 text-center">
-  <h3 class="text-4xl font-bold mb-12 text-gray-800">Featured Projects</h3>
-
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto text-left">
-
-  <!-- Project Card: Software Engineering Portfolio Website -->
-<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">Software Engineering Portfolio Website</h4>
-  <p class="text-gray-700 mb-4">
-    A responsive personal portfolio website showcasing my software engineering projects. 
-    Designed and developed using HTML and CSS, with a clean user interface and smooth layout. 
-    Deployed via GitHub Pages for fast, reliable access.
-  </p>
-  <div class="flex flex-wrap gap-4">
-    <a href="https://github.com/Franklyn-SWE/portfolio" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-      View on GitHub
-    </a>
-    <a href="https://franklyn-swe.github.io/portfolio/" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">
-      Visit Live Site
-    </a>
-  </div>
-</div>
-
-
-
-    <!-- UK House Price Prediction Project  -->
-    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">UK House Price Prediction System</h4>
-  <p class="text-gray-600 mb-4">
-    A robust machine learning system developed to predict UK house prices using the CRISP-DM methodology. This end-to-end project involves data preprocessing, exploratory data analysis, feature engineering, model training, and evaluation. 
-    The solution was deployed via a responsive <strong>Streamlit application</strong>, allowing users to input property details and receive real-time price predictions.
-  </p>
-  <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
-    <a href="https://github.com/Franklyn-SWE/Enhanced_UK_House_Price_Prediction_Model" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-      ML Development Code
-    </a>
-    <a href="https://github.com/Franklyn-SWE/UK_HOUSE_PRICE_PREDICTION_APP" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">
-      Streamlit App & Deployment
-    </a>
-  </div>
-</div>
-
-    <!-- Project Card: UK House Price Map -->
-<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">UK House Price Map</h4>
-  <p class="text-gray-700 mb-4">
-    An interactive web application that visualizes average UK house prices by region. Built using a custom API for dynamic data retrieval and deployed via GitHub Pages. 
-    Ideal for property researchers, buyers, or investors seeking geographic price trends.
-  </p>
-  <div class="flex flex-wrap gap-4">
-    <a href="https://github.com/Franklyn-SWE/uk-house-price-map" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-      View on GitHub
-    </a>
-    <a href="https://franklyn-swe.github.io/uk-house-price-map/" target="_blank" class="text-sm text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700 transition">
-      Live Interactive Map
-    </a>
-  </div>
-</div>
-
-   <!-- Project 1 -->
-<div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">Human Trafficking Coercion Detection App</h4>
-  <p class="text-gray-600 mb-4">
-    A BERT-powered multi-label classification model designed to detect coercion indicators in human trafficking field reports. 
-    Integrated with a Gradio-based front-end, the tool enables NGOs to upload reports and identify potential signs of exploitation for improved decision-making and intervention.
-  </p>
-  <a href="#" class="inline-block text-sm text-white bg-gray-400 px-4 py-2 rounded cursor-not-allowed" title="Private GitHub repo – not publicly accessible">
-    Private Repository
-  </a>
-  <p class="text-xs text-gray-500 mt-2">*Repository is private. Contact us for  demo.</p>
-</div>
-
-   <!-- Project Card: Mental Health Detection Web App -->
-<div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">Mental Health Detection Web App</h4>
-  <p class="text-gray-600 mb-4">
-    A smart web application that detects potential signs of mental health issues based on user responses. 
-    Built using Django for backend logic and Bootstrap for responsive UI, the app supports early detection and encourages users to seek professional support.
-  </p>
-  <a href="https://github.com/Franklyn-SWE/Mental-Health-Detectting-Smart-App" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-    View on GitHub
-  </a>
-</div>
-
-
-    <!-- Project Card: Customer Segmentation using Clustering -->
-<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">Customer Segmentation using Clustering</h4>
-  <p class="text-gray-700 mb-4">
-    A machine learning model that segments customers into distinct groups based on behavioral and demographic data using clustering algorithms. 
-    This approach enables businesses to identify high-value segments and personalize marketing strategies for potential customers.
-  </p>
-  <a href="https://github.com/Franklyn-SWE/Customer_Segmentation_Clustering" target="_blank" class="inline-block text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-    View on GitHub
-  </a>
-</div>
-
-<!-- Project Card: Netflix Movie Recommendation System -->
-<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">Netflix Movie Recommendation System</h4>
-  <p class="text-gray-700 mb-4">
-    A content-based movie recommendation system that suggests films to users based on similarities in genres, descriptions, and metadata. 
-    Built using Python and machine learning techniques, it demonstrates the fundamentals of personalized content delivery for streaming platforms.
-  </p>
-  <a href="https://github.com/Franklyn-SWE/Netflix_Movies_Recommendation_System" target="_blank" class="inline-block text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-    View on GitHub
-  </a>
-</div>
-
-<!-- Student Dropout Prediction Project -->
-<div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">Student Dropout Prediction Project</h4>
-  <p class="text-gray-600 mb-4">
-    A machine learning classification system designed to predict student dropout risks using socio-academic data. The project includes data preprocessing, exploratory data analysis, feature engineering, and model evaluation with Logistic Regression, Decision Trees, and SVM.  
-    The model is deployed through a scalable <strong>Flask API</strong> to support integration and real-time inference.
-  </p>
-  <div class="flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
-    <a href="https://github.com/Franklyn-SWE/students_drop_out_prediction" target="_blank" class="text-sm text-white bg-gray-800 px-4 py-2 rounded hover:bg-gray-900 transition">
-      View on GitHub
-    </a>
-  </div>
-</div>
-
-
-    <!-- Project Card: MudiaTech YouTube Channel -->
-<div class="bg-white rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300">
-  <h4 class="text-xl font-semibold text-blue-700 mb-2">MudiaTech YouTube Channel</h4>
-  <p class="text-gray-700 mb-4">
-    My official YouTube channel (formerly Klynoldev), where I create educational videos on Python, SQL, Java, software engineering, and machine learning. 
-    The channel supports MudiaTech’s mission to make tech education and AI solutions more accessible.
-  </p>
-  <a href="https://youtube.com/@mudiaTech" target="_blank" class="inline-block text-sm text-white bg-red-600 px-4 py-2 rounded hover:bg-red-700 transition">
-    Visit Channel
-  </a>
-</div>
-
-    <!-- Project  website -->
-    <div class="bg-white p-6 rounded-lg shadow hover:shadow-xl transition duration-300">
-      <h4 class="text-xl font-semibold text-blue-700 mb-2">Mudiatech Business Website</h4>
-      <p class="text-gray-600 mb-4">
-       A professional and scalable company website built with HTML and CSS, designed to evolve into a full Django web application. 
-       It showcases MudiaTech’s services in AI, software development, and data-driven solutions.
-      </p>
-      <a href="https://github.com/Franklyn-SWE/mudiatech-site" target="_blank" class="text-blue-500 hover:underline text-sm">View on GitHub</a>
-    </div>
-  </div>
-
-  <div class="mt-12">
-    <a href="#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-      Let’s Work Together
-    </a>
-  </div>
-  
- 
-
-  
-<!-- About the Founder & Team -->
-<section id="team" class="py-16 px-6 bg-white text-center">
-  <h3 class="text-3xl font-semibold mb-12 text-gray-800">Meet the Founder</h3>
-
-  <div class="max-w-4xl mx-auto md:flex items-center text-left space-y-8 md:space-y-0 md:space-x-10">
-    <!-- Founder Image -->
-    <img
-      src="assets/unnamed.jpg"
-      alt="Franklyn Oliha"
-      class="w-48 h-48 rounded-full object-cover mx-auto md:mx-0 shadow-md"
-    />
-
-    <!-- Founder Bio -->
-    <div>
-      <h4 class="text-2xl font-bold text-blue-700">Franklyn Oliha</h4>
-      <p class="text-sm text-gray-500 mb-2">
-        MSc Data Science & Machine Learning · BEng (Hons) Software Engineering
-      </p>
-      <p class="text-gray-700 leading-relaxed">
-        I’m a British Graduate Software Engineer, Data Scientist, and Machine Learning Engineer with a strong passion for solving real-world problems through technology. 
-        With academic excellence and hands-on experience in AI, data science, and full-stack development, I founded <strong>MudiaTech</strong> to empower businesses and NGOs with intelligent, scalable digital solutions.
-      </p>
-    </div>
-  </div>
-
-  <!-- Team Section -->
-  <div class="mt-16">
-    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Team</h3>
-    <p class="max-w-2xl mx-auto text-gray-600">
-      At <strong>MudiaTech</strong>, we collaborate with a growing network of passionate developers,
-      designers, and data professionals — all committed to building ethical, impactful, and forward-thinking solutions that drive meaningful change.
-    </p>
-  </div>
-</section>
-
-
-</section>
-
-
-      <!-- Contact -->
-      <section id="contact" class="py-20 px-6 bg-gray-50 dark:bg-gray-900">
-  <div class="max-w-2xl mx-auto">
-    <h2 class="text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">Get in Touch</h2>
-    <p class="text-center text-gray-600 dark:text-gray-300 mb-10">
-      We'd love to hear from you. Send us a message or email us directly.
-    </p>
-
-    <form
-      action="https://formspree.io/f/xgvzawve"
-      method="POST"
-      class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 md:p-8 grid gap-5"
-    >
-      <input
-        type="hidden"
-        name="_next"
-        value="https://mudiatech.co.uk/thank-you.html"
-      />
-
-      <div>
-        <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          placeholder="Your full name"
-          required
-          class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        />
       </div>
+    </section>
 
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          placeholder="you@example.com"
-          required
-          class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        />
+    <!-- Trust Metrics -->
+    <section class="py-20 bg-[#111111] border-y border-white/10">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Why Businesses Trust MudiaTech
+          </h2>
+          <p class="text-white/50 max-w-2xl mx-auto text-sm">
+            Trust metrics that reflect delivery consistency, responsiveness, and
+            client confidence.
+          </p>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div
+            class="bg-[#171717] rounded-2xl border border-white/10 p-6 text-center"
+          >
+            <p class="text-3xl font-bold text-[#D4AF37]">20+</p>
+            <p class="text-white/55 text-sm mt-2">Production Deployments</p>
+          </div>
+          <div
+            class="bg-[#171717] rounded-2xl border border-white/10 p-6 text-center"
+          >
+            <p class="text-3xl font-bold text-[#D4AF37]">8+</p>
+            <p class="text-white/55 text-sm mt-2">Sectors Supported</p>
+          </div>
+          <div
+            class="bg-[#171717] rounded-2xl border border-white/10 p-6 text-center"
+          >
+            <p class="text-3xl font-bold text-[#D4AF37]">95%</p>
+            <p class="text-white/55 text-sm mt-2">Client Satisfaction Score</p>
+          </div>
+          <div
+            class="bg-[#171717] rounded-2xl border border-white/10 p-6 text-center"
+          >
+            <p class="text-3xl font-bold text-[#D4AF37]">24h</p>
+            <p class="text-white/55 text-sm mt-2">Average First Response</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-1">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Write your message here..."
-          required
-          class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600"
-        ></textarea>
+    <!-- Selected Work -->
+    <section id="selected-work" class="py-24 bg-[#0B0B0B]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">Selected Work</h2>
+          <p class="text-white/50 max-w-3xl mx-auto text-sm leading-relaxed">
+            From prediction platforms to domain-specific AI assistants, these
+            systems were built to accelerate decisions, reduce manual effort,
+            and deliver measurable business outcomes.
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-7">
+          <a
+            href="https://mudiatech-video-automation.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="work-card group block bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest">
+                Content Automation
+              </p>
+              <span
+                class="inline-flex items-center rounded-full border border-emerald-400/35 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-emerald-300"
+                >LIVE DEMO</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              AI Video Automation System
+            </h3>
+            <p class="text-white/55 text-sm leading-relaxed mb-5">
+              Turn one long video into 10+ viral short clips automatically. AI
+              detects key moments, generates captions, and formats content for
+              TikTok, YouTube Shorts, Instagram, and more — in minutes.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >AI Automation</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Content Repurposing</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Video AI</span
+              >
+            </div>
+            <div class="flex flex-wrap gap-3 mb-6 text-xs text-white/60">
+              <span>⚡ 5 min turnaround</span>
+              <span>📈 10+ clips per upload</span>
+            </div>
+            <span
+              class="inline-flex border border-[#D4AF37]/35 text-white px-5 py-2.5 rounded-full text-sm font-semibold group-hover:text-[#D4AF37] group-hover:border-[#D4AF37]/60 transition"
+              >View Live Demo</span
+            >
+          </a>
+
+          <a
+            href="https://ukhousepricepredictionv2.streamlit.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="work-card group block bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest">
+                Predictive Analytics
+              </p>
+              <span
+                class="inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-emerald-300"
+                >LIVE</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              UK House Price Prediction System
+            </h3>
+            <p class="text-white/55 text-sm leading-relaxed mb-5">
+              Built a machine learning system that helps users estimate UK
+              property values faster and make better buy/sell decisions using
+              location and market trend signals.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Python</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Machine Learning</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Forecasting</span
+              >
+            </div>
+            <span
+              class="inline-flex border border-[#D4AF37]/35 text-white px-5 py-2.5 rounded-full text-sm font-semibold group-hover:text-[#D4AF37] group-hover:border-[#D4AF37]/60 transition"
+              >View Live App</span
+            >
+          </a>
+
+          <a
+            href="https://franklyn-swe.github.io/uk-house-price-map/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="work-card group block bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest">
+                Geo Intelligence
+              </p>
+              <span
+                class="inline-flex items-center rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-emerald-300"
+                >LIVE</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              UK House Price Interactive Map
+            </h3>
+            <p class="text-white/55 text-sm leading-relaxed mb-5">
+              Explore UK residential property price trends (2015-2024) through
+              an interactive map. Built to help users visualise geographic
+              patterns and uncover location-based insights from real housing
+              data.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Data Visualisation</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >GIS</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >JavaScript</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Analytics</span
+              >
+            </div>
+            <span
+              class="inline-flex border border-[#D4AF37]/35 text-white px-5 py-2.5 rounded-full text-sm font-semibold group-hover:text-[#D4AF37] group-hover:border-[#D4AF37]/60 transition"
+              >View Interactive Map</span
+            >
+          </a>
+
+          <a
+            href="#contact"
+            class="work-card group block bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest">
+                AI For Social Impact
+              </p>
+              <span
+                class="inline-flex items-center rounded-full border border-violet-300/30 bg-violet-300/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-violet-200"
+                >RESEARCH</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              Human Trafficking Coercion Detection System
+            </h3>
+            <p class="text-white/55 text-sm leading-relaxed mb-5">
+              Advanced NLP system using fine-tuned BERT models to identify
+              multiple coercion indicators in unstructured text. Designed for
+              analyst use in real-world NGO environments to support scalable,
+              consistent review of trafficking reports.
+            </p>
+            <p class="text-white/40 text-xs leading-relaxed mb-5 italic">
+              Due to the sensitive nature of the data and application context,
+              this system is not publicly accessible.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >NLP</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >BERT</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Multi-label Classification</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Ethical AI</span
+              >
+            </div>
+            <span
+              class="inline-flex border border-[#D4AF37]/35 text-white px-5 py-2.5 rounded-full text-sm font-semibold group-hover:text-[#D4AF37] group-hover:border-[#D4AF37]/60 transition"
+              >Request Demo</span
+            >
+            <p class="text-white/35 text-xs mt-3 italic">
+              Demo access available upon request (subject to data restrictions)
+            </p>
+          </a>
+
+          <a
+            href="#contact"
+            class="work-card group block bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest">
+                Sales Enablement
+              </p>
+              <span
+                class="inline-flex items-center rounded-full border border-sky-300/30 bg-sky-300/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-sky-200"
+                >IN DEVELOPMENT</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold mb-3">LeadMate</h3>
+            <p class="text-white/55 text-sm leading-relaxed mb-5">
+              Developed an AI lead intelligence workflow that helps teams
+              qualify prospects, personalise outreach, and reduce
+              time-to-conversion.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Automation</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >CRM Integration</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Lead Scoring</span
+              >
+            </div>
+            <span
+              class="inline-flex border border-[#D4AF37]/35 text-white px-5 py-2.5 rounded-full text-sm font-semibold group-hover:text-[#D4AF37] group-hover:border-[#D4AF37]/60 transition"
+              >Request Demo</span
+            >
+          </a>
+
+          <a
+            href="#contact"
+            class="work-card group block bg-[#111111] border border-white/10 rounded-2xl p-8 transition-all duration-300"
+          >
+            <div class="flex items-center justify-between gap-4 mb-4">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest">
+                Career Intelligence
+              </p>
+              <span
+                class="inline-flex items-center rounded-full border border-[#D4AF37]/40 bg-[#D4AF37]/10 px-3 py-1 text-[11px] font-semibold tracking-wide text-[#D4AF37]"
+                >PRIVATE BETA</span
+              >
+            </div>
+            <h3 class="text-xl font-semibold mb-3">
+              CareerAgentAI — AI Job Application Assistant
+            </h3>
+            <p class="text-white/55 text-sm leading-relaxed mb-5">
+              AI-powered career assistant designed to automate and optimise the
+              job application process. CareerAgentAI tailors CVs, generates
+              job-specific cover letters, intelligently matches opportunities,
+              and automates applications — helping users apply faster, smarter,
+              and more effectively.
+            </p>
+            <p class="text-white/40 text-xs leading-relaxed mb-5 italic">
+              Currently in private beta with ongoing feature refinement and user
+              testing.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >LLM</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Automation</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >SaaS</span
+              >
+              <span
+                class="text-xs text-white/60 border border-white/15 rounded-full px-2.5 py-1"
+                >Career Tech</span
+              >
+            </div>
+            <span
+              class="inline-flex border border-[#D4AF37]/35 text-white px-5 py-2.5 rounded-full text-sm font-semibold group-hover:text-[#D4AF37] group-hover:border-[#D4AF37]/60 transition"
+              >Request Early Access</span
+            >
+            <p class="text-white/35 text-xs mt-3 italic">
+              Limited early access available upon request
+            </p>
+          </a>
+        </div>
       </div>
+    </section>
 
-      <button
-        type="submit"
-        class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-md font-semibold transition"
-      >
-        Send Message
-      </button>
-    </form>
+    <!-- CTA Strip -->
+    <section class="py-16 bg-[#0B0B0B]">
+      <div class="max-w-6xl mx-auto px-4">
+        <div
+          class="rounded-2xl border border-[#D4AF37]/30 bg-[linear-gradient(120deg,_rgba(212,175,55,0.14),_rgba(23,23,23,0.95)_42%)] p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+        >
+          <div>
+            <p
+              class="text-[#D4AF37] text-xs font-semibold tracking-widest uppercase mb-2"
+            >
+              Ready To Move Faster
+            </p>
+            <h3 class="text-2xl md:text-3xl font-bold mb-2">
+              Turn Your AI Roadmap Into Production Systems
+            </h3>
+            <p class="text-white/55 text-sm">
+              From strategy to deployment, we help you launch with confidence
+              and speed.
+            </p>
+          </div>
+          <a
+            href="#contact"
+            class="inline-flex justify-center bg-[#D4AF37] text-black px-8 py-3.5 rounded-full font-semibold hover:bg-[#E6C766] transition text-sm"
+          >
+            Start Your Project
+          </a>
+        </div>
+      </div>
+    </section>
 
-    <div class="text-center mt-6 text-gray-600 dark:text-gray-300">
-      Or email us directly at
-      <a href="mailto:contact@mudiatech.co.uk" class="text-blue-600 underline hover:text-blue-800">
-        contact@mudiatech.co.uk
-      </a>
-    </div>
-  </div>
-</section>
-<script>
-  const form = document.querySelector("form");
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault(); // Prevent default form submission
-    const formData = new FormData(form);
+    <!-- Founder / Credibility Section -->
+    <section class="py-20 bg-[#0a0a0a]">
+      <div class="max-w-6xl mx-auto px-6">
+        <div
+          class="rounded-2xl border border-white/10 bg-[#111111] p-8 md:p-14 hover:border-[#D4AF37]/20 transition-all duration-300 hover:shadow-[0_8px_48px_rgba(212,175,55,0.07)]"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+            <!-- Founder Image -->
+            <div class="flex-shrink-0 flex flex-col items-center">
+              <div class="relative">
+                <div
+                  class="absolute inset-0 rounded-full bg-[#D4AF37]/15 blur-2xl scale-110"
+                ></div>
+                <div
+                  class="relative w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-2 border-[#D4AF37]/40 shadow-[0_0_40px_rgba(212,175,55,0.2)]"
+                >
+                  <img
+                    src="assets/unnamed.jpg"
+                    alt="Franklyn Oliha — AI Systems Engineer and Founder of MudiaTech"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+              </div>
+              <p
+                class="mt-5 text-[#D4AF37] font-semibold text-sm tracking-wide"
+              >
+                Franklyn Oliha
+              </p>
+              <p class="text-white/45 text-xs mt-1 text-center max-w-[160px]">
+                Founder, MudiaTech
+              </p>
+            </div>
 
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          Accept: "application/json"
-        }
-      });
+            <!-- Text Content -->
+            <div class="flex-1 text-center md:text-left">
+              <p class="text-[#D4AF37] text-xs uppercase tracking-widest mb-3">
+                Meet the Founder
+              </p>
+              <h2 class="text-2xl md:text-3xl font-bold mb-2">
+                Built by an AI Systems Engineer
+              </h2>
+              <p class="text-white/45 text-sm mb-6">
+                AI Systems Engineer &nbsp;·&nbsp; Data Scientist &nbsp;·&nbsp;
+                Software Engineer
+              </p>
+              <p class="text-white/65 text-sm leading-relaxed mb-3">
+                Franklyn Oliha is an AI Systems Engineer specialising in
+                designing and deploying production-grade AI systems that
+                automate workflows, generate insights, and scale business
+                operations.
+              </p>
+              <p class="text-white/65 text-sm leading-relaxed mb-8">
+                With a background in data science, machine learning, and
+                software engineering, he builds end-to-end intelligent systems —
+                from data to deployment — delivering real-world impact across
+                businesses and organisations.
+              </p>
+              <ul class="space-y-2.5 mb-8 text-sm inline-block text-left">
+                <li class="flex items-center gap-2.5 text-white/70">
+                  <span class="text-[#D4AF37] font-bold text-base leading-none"
+                    >✔</span
+                  >
+                  Production AI Systems
+                </li>
+                <li class="flex items-center gap-2.5 text-white/70">
+                  <span class="text-[#D4AF37] font-bold text-base leading-none"
+                    >✔</span
+                  >
+                  SaaS Platforms (LeadMate, CareerAgentAI)
+                </li>
+                <li class="flex items-center gap-2.5 text-white/70">
+                  <span class="text-[#D4AF37] font-bold text-base leading-none"
+                    >✔</span
+                  >
+                  NLP &amp; Machine Learning
+                </li>
+                <li class="flex items-center gap-2.5 text-white/70">
+                  <span class="text-[#D4AF37] font-bold text-base leading-none"
+                    >✔</span
+                  >
+                  UK Public Sector Experience
+                </li>
+              </ul>
+              <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                <a
+                  href="https://www.franklynoliha.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-[#D4AF37] text-black px-7 py-3 rounded-full font-semibold text-sm hover:bg-[#E6C766] transition focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-[#111111]"
+                >
+                  View Full Portfolio
+                  <i
+                    class="fa-solid fa-arrow-up-right-from-square text-xs"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      if (response.ok) {
-        alert("Thank you! Your message has been sent.");
-        form.reset(); // Clear the form fields
-      } else {
-        alert("Oops! Something went wrong.");
-      }
-    } catch (error) {
-      alert("Error submitting form.");
-    }
-  });
-</script>
+    <!-- Booking CTA Section -->
+    <section class="py-20 bg-[#0B0B0B]">
+      <div class="max-w-4xl mx-auto px-6">
+        <div
+          class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111] p-8 md:p-12 text-center"
+        >
+          <div
+            class="pointer-events-none absolute inset-x-0 -top-20 mx-auto h-52 w-52 rounded-full bg-[#D4AF37]/12 blur-3xl"
+          ></div>
+          <div class="relative">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+              Book a Free Consultation
+            </h2>
+            <p class="text-white/80 text-sm md:text-base mb-4">
+              Schedule a 30-minute strategy call to discuss your AI, automation,
+              or software project.
+            </p>
+            <p
+              class="text-[#9CA3AF] text-sm leading-relaxed max-w-2xl mx-auto mb-5"
+            >
+              Let's explore how MudiaTech can help you design and deploy
+              AI-powered solutions tailored to your business needs.
+            </p>
+            <p class="text-[#D4AF37] text-xs md:text-sm font-medium mb-8">
+              Free 30-minute consultation • No commitment
+            </p>
 
-   
+            <a
+              href="https://calendly.com/olihafosa/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center bg-[#D4AF37] text-black px-8 py-3.5 rounded-full font-semibold text-sm md:text-base hover:opacity-95 hover:shadow-[0_0_26px_rgba(212,175,55,0.25)] transition focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-[#111111]"
+            >
+              Schedule Your Call
+            </a>
+
+            <p class="mt-4 text-sm text-[#9CA3AF]">
+              Prefer email?
+              <a
+                href="#contact"
+                class="text-white hover:text-[#D4AF37] transition"
+                >Use the contact form below.</a
+              >
+            </p>
+
+            <div
+              class="mt-7 flex flex-wrap items-center justify-center gap-2.5 text-xs text-white/70"
+            >
+              <span class="rounded-full border border-white/15 px-3 py-1"
+                >AI Strategy</span
+              >
+              <span class="rounded-full border border-white/15 px-3 py-1"
+                >Automation Planning</span
+              >
+              <span class="rounded-full border border-white/15 px-3 py-1"
+                >Software Consultation</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#111111]">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-14">
+          <p class="text-[#D4AF37] text-xs uppercase tracking-[0.24em] mb-3">
+            Contact MudiaTech
+          </p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Let's Build Your AI System
+          </h2>
+          <p
+            class="text-white/50 max-w-2xl mx-auto text-sm md:text-base leading-relaxed"
+          >
+            Tell us about your challenge and we'll map out the right AI,
+            automation, or software solution for your business.
+          </p>
+        </div>
+        <div
+          class="grid lg:grid-cols-[1.2fr_0.8fr] gap-8 xl:gap-10 items-start"
+        >
+          <div
+            class="rounded-2xl border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(17,17,17,0.96))] p-6 md:p-8 shadow-[0_12px_40px_rgba(0,0,0,0.22)]"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-7"
+            >
+              <div>
+                <p
+                  class="text-[#D4AF37] text-xs uppercase tracking-[0.22em] mb-2"
+                >
+                  Project Enquiry
+                </p>
+                <h3 class="text-2xl font-semibold mb-2">
+                  Tell us what you're building
+                </h3>
+                <p class="text-white/50 text-sm leading-relaxed max-w-xl">
+                  Share your goals, current workflow, or technical pain points.
+                  We'll reply with the best next step.
+                </p>
+              </div>
+              <div
+                class="inline-flex items-center rounded-full border border-[#D4AF37]/20 bg-[#D4AF37]/10 px-4 py-2 text-xs text-[#D4AF37] font-medium"
+              >
+                Response within 24 hours
+              </div>
+            </div>
+
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/myzgzgve"
+              method="POST"
+              class="space-y-5"
+            >
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block text-sm font-medium text-white/60 mb-2"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    placeholder="Your name"
+                    class="w-full bg-[#171717] border border-white/10 focus:border-[#D4AF37]/50 focus:ring-2 focus:ring-[#D4AF37]/15 text-white placeholder-white/25 px-4 py-3 rounded-xl focus:outline-none transition text-sm"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-white/60 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    name="email"
+                    required
+                    placeholder="your@email.com"
+                    class="w-full bg-[#171717] border border-white/10 focus:border-[#D4AF37]/50 focus:ring-2 focus:ring-[#D4AF37]/15 text-white placeholder-white/25 px-4 py-3 rounded-xl focus:outline-none transition text-sm"
+                  />
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-white/60 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Tell us about your project, timeline, or the workflow you want to improve..."
+                  class="w-full bg-[#171717] border border-white/10 focus:border-[#D4AF37]/50 focus:ring-2 focus:ring-[#D4AF37]/15 text-white placeholder-white/25 px-4 py-3 rounded-xl focus:outline-none transition text-sm resize-none"
+                ></textarea>
+              </div>
+              <div
+                class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-1"
+              >
+                <p class="text-xs text-white/40">
+                  Best for AI automation, custom software, ML systems, and
+                  technical advisory.
+                </p>
+                <button
+                  type="submit"
+                  class="w-full sm:w-auto sm:min-w-[220px] bg-[#D4AF37] text-black px-8 py-3.5 rounded-full font-semibold hover:bg-[#E6C766] hover:shadow-[0_0_28px_rgba(212,175,55,0.18)] transition text-sm"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="space-y-6">
+            <div
+              class="rounded-2xl border border-white/10 bg-[#141414] p-6 md:p-7 shadow-[0_10px_34px_rgba(0,0,0,0.18)]"
+            >
+              <p
+                class="text-[#D4AF37] text-xs uppercase tracking-[0.22em] mb-3"
+              >
+                Contact Information
+              </p>
+              <h3 class="text-xl font-semibold mb-3">Start the conversation</h3>
+              <p class="text-white/50 text-sm leading-relaxed mb-6">
+                Have a project in mind? Reach out with your goals and MudiaTech
+                will come back with a clear recommendation, scope direction, or
+                next-step call.
+              </p>
+
+              <div class="space-y-5">
+                <div
+                  class="rounded-xl border border-white/10 bg-[#171717] px-4 py-4"
+                >
+                  <h4
+                    class="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-2"
+                  >
+                    Email
+                  </h4>
+                  <a
+                    href="mailto:contact@mudiatech.co.uk"
+                    class="text-white/75 text-sm hover:text-[#D4AF37] transition"
+                    >contact@mudiatech.co.uk</a
+                  >
+                </div>
+
+                <div
+                  class="rounded-xl border border-white/10 bg-[#171717] px-4 py-4"
+                >
+                  <h4
+                    class="text-xs font-semibold text-[#D4AF37] uppercase tracking-widest mb-3"
+                  >
+                    Why Clients Reach Out
+                  </h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="text-xs text-white/65 border border-white/12 rounded-full px-3 py-1"
+                      >AI Strategy</span
+                    >
+                    <span
+                      class="text-xs text-white/65 border border-white/12 rounded-full px-3 py-1"
+                      >Automation Systems</span
+                    >
+                    <span
+                      class="text-xs text-white/65 border border-white/12 rounded-full px-3 py-1"
+                      >Custom SaaS</span
+                    >
+                    <span
+                      class="text-xs text-white/65 border border-white/12 rounded-full px-3 py-1"
+                      >Machine Learning</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-   <!-- Footer -->
-<footer class="bg-blue-600 dark:bg-blue-900 text-white py-8">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <div class="mt-4 flex justify-center space-x-6 text-2xl">
-      <a
-        href="https://linkedin.com/in/franklyn-oliha/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:text-blue-300 transition"
-        aria-label="LinkedIn"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a
-        href="https://github.com/Franklyn-SWE"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:text-blue-300 transition"
-        aria-label="GitHub"
-      >
-        <i class="fab fa-github"></i>
-      </a>
-      <a
-        href="https://youtube.com/@mudiatech"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="hover:text-red-400 transition"
-        aria-label="YouTube"
-      >
-        <i class="fab fa-youtube"></i>
-      </a>
-    </div>
+    <footer class="bg-[#0B0B0B] border-t border-white/10 py-10">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="flex items-center justify-center space-x-2 mb-6">
+          <img
+            src="assets/logo7.1.png"
+            alt="MudiaTech"
+            width="24"
+            height="24"
+            loading="lazy"
+            decoding="async"
+            class="h-6 w-6 rounded"
+          />
+          <span class="text-[#D4AF37] font-bold text-sm">MudiaTech</span>
+        </div>
 
-   
+        <!-- Primary Social Links -->
+        <div
+          class="flex flex-wrap items-start justify-center gap-8 md:gap-12 mb-5"
+        >
+          <a
+            href="https://www.linkedin.com/in/franklyn-oliha/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            class="group flex flex-col items-center gap-2 text-white/55 hover:text-[#0A66C2] transition-all duration-200"
+          >
+            <i
+              class="fa-brands fa-linkedin text-3xl md:text-4xl group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(10,102,194,0.45)] transition-all duration-200"
+              aria-hidden="true"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-wider text-white/55 group-hover:text-white transition"
+              >LinkedIn</span
+            >
+          </a>
+          <a
+            href="https://github.com/Mudia-Tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            class="group flex flex-col items-center gap-2 text-white/55 hover:text-white transition-all duration-200"
+          >
+            <i
+              class="fa-brands fa-github text-3xl md:text-4xl group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(255,255,255,0.22)] transition-all duration-200"
+              aria-hidden="true"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-wider text-white/55 group-hover:text-white transition"
+              >GitHub</span
+            >
+          </a>
+          <a
+            href="https://youtube.com/@mudiatech"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            class="group flex flex-col items-center gap-2 text-white/55 hover:text-[#FF0000] transition-all duration-200"
+          >
+            <i
+              class="fa-brands fa-youtube text-3xl md:text-4xl group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(255,0,0,0.35)] transition-all duration-200"
+              aria-hidden="true"
+            ></i>
+            <span
+              class="text-xs uppercase tracking-wider text-white/55 group-hover:text-white transition"
+              >YouTube</span
+            >
+          </a>
+        </div>
 
-    <p class="mt-6 text-sm text-gray-200">
-      Crafted with <span class="text-red-400">❤️</span> by 
-      <span class="font-medium">Franklyn Oliha</span>
-    </p>
-  </div>
-</footer>
+        <!-- Secondary Social Links -->
+        <div class="flex flex-wrap items-center justify-center gap-5 mb-3">
+          <a
+            href="https://www.facebook.com/mudiatec"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            class="text-white/30 hover:text-[#1877F2] hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(24,119,242,0.45)] transition-all duration-200"
+          >
+            <i class="fa-brands fa-facebook text-xl" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://x.com/mudiatechai"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X (Twitter)"
+            class="text-white/30 hover:text-white hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.25)] transition-all duration-200"
+          >
+            <i class="fa-brands fa-x-twitter text-xl" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.tiktok.com/@mudiatech.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            class="text-white/30 hover:text-[#69C9D0] hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(105,201,208,0.4)] transition-all duration-200"
+          >
+            <i class="fa-brands fa-tiktok text-xl" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/mudiatechai"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            class="text-white/30 hover:text-[#E1306C] hover:scale-110 hover:drop-shadow-[0_0_8px_rgba(225,48,108,0.4)] transition-all duration-200"
+          >
+            <i class="fa-brands fa-instagram text-xl" aria-hidden="true"></i>
+          </a>
+        </div>
+        <p class="text-white/30 text-xs mb-6">
+          Follow MudiaTech for AI automation, SaaS systems &amp; real-world
+          builds
+        </p>
 
-
-
-    <footer class="py-6 text-center bg-gray-800 text-gray-300 text-sm">
-       &copy; 2025 MudiaTech — a trading name of Mudia Estate Limited.<br>
-       Mudia Estate Limited is a registered company in England and Wales. Company No. 14077001. All rights reserved.
+        <p class="text-white/35 text-sm">
+          &copy; <span id="year"></span> MudiaTech. All rights reserved.
+        </p>
+        <p class="text-white/25 text-xs mt-1">
+          Bringing intelligence to life through technology
+        </p>
+      </div>
     </footer>
 
-
-    <!-- JavaScript -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
     <script>
-      AOS.init();
-
-      const toggleBtn = document.getElementById("theme-toggle");
-      const toggleIcon = document.getElementById("toggle-icon");
-      const htmlEl = document.documentElement;
-
-      if (
-        localStorage.getItem("theme") === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        htmlEl.classList.add("dark");
-        toggleIcon.textContent = "☀️";
-      } else {
-        toggleIcon.textContent = "🌙";
-      }
-
-      toggleBtn.addEventListener("click", () => {
-        if (htmlEl.classList.contains("dark")) {
-          htmlEl.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-          toggleIcon.textContent = "🌙";
-        } else {
-          htmlEl.classList.add("dark");
-          localStorage.setItem("theme", "dark");
-          toggleIcon.textContent = "☀️";
-        }
-      });
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-
-    
   </body>
 </html>

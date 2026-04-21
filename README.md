@@ -1,35 +1,45 @@
-# 🌐 MudiaTech Official Website – www.mudiatech.co.uk
+# MudiaTech Website
 
-Welcome to the GitHub repo for the official MudiaTech website. Built to showcase AI, software, and data solutions by MudiaTech.
+Official repository for the MudiaTech marketing site.
 
-## 🚀 Project Overview
+Live domain: https://www.mudiatech.co.uk/
 
-This site was designed, developed, and deployed from scratch using modern web development tools with future scalability in mind.
+## Stack
+- HTML5
+- Tailwind CSS (CDN)
+- Vanilla JavaScript
+- Font Awesome
 
-## 🛠️ Development Stack
-- **Frontend**: HTML, CSS, JavaScript
-- **Editor**: Visual Studio Code
-- **Version Control**: Git + GitHub
-- **Deployment**: Netlify
-- **Domain**: mudiatech.co.uk
+## Current Release (Production)
+This release includes final production polish and deployment readiness updates:
+- Fully refreshed MudiaTech dark/gold UI system
+- Improved responsive behavior across mobile, tablet, desktop
+- Optimized interaction polish (buttons, forms, focus states, hover consistency)
+- Mobile navigation toggle with accessible controls
+- Updated contact flow and branded thank-you page
+- Consolidated social links and footer hierarchy
+- Performance and accessibility baseline improvements (image loading hints, reduced-motion support, scroll offset handling)
 
-## 🧱 Project Milestones
+## Project Structure
+- index.html: main landing page
+- style.css: global brand styles and interaction polish
+- script.js: form handling, smooth scroll, nav behavior
+- thank-you.html: post-submit confirmation page
+- sitemap.xml: search indexing map
+- robots.txt: crawler rules + sitemap reference
 
-| Step | Task                              | Status     |
-|------|-----------------------------------|------------|
-| 1    | Domain name registered            | ✅ Completed |
-| 2    | GitHub repo created               | ✅ Completed |
-| 3    | Website layout/wireframe designed | ✅ Completed |
-| 4    | Static website developed          | ✅ Completed |
-| 5    | Projects integrated               | ✅ Completed |
-| 6    | SEO + Mobile responsiveness       | ✅ Completed |
-| 7    | Hosted via Netlify                | ✅ Completed |
-| 8    | Domain linked to Netlify          | ✅ Completed |
-| 9    | QA + Browser testing              | ✅ Completed |
-| 10   | Site officially launched          | ✅ Completed |
+## Local Development
+From the project root:
 
-## 🔗 Visit Live Site
-👉 [mudiatech.co.uk](https://mudiatech.co.uk)
+1. Start a local server
+	- python -m http.server 3000
+2. Open in browser
+	- http://localhost:3000/
 
-## 📌 License
-This project is maintained by [Franklyn Oliha] and MudiaTech Ltd. All rights reserved.
+## Deployment Notes
+- Primary hosting: Netlify
+- Ensure custom domain remains mapped to https://www.mudiatech.co.uk/
+- Ensure robots and sitemap reference the same production domain
+
+## Maintainer
+MudiaTech / Franklyn Oliha
