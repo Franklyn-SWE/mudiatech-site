@@ -81,20 +81,8 @@ body {
     0 0 32px rgba(212, 175, 55, 0.12);
 }
 
-.featured-demo-shell {
-  box-shadow: 0 0 0 rgba(212, 175, 55, 0);
-}
-
-.featured-demo-card {
-  transform: scale(1);
-}
-
-.featured-demo-shell:hover .featured-demo-card {
-  transform: scale(1.01);
-  box-shadow:
-    0 24px 44px rgba(0, 0, 0, 0.34),
-    0 0 38px rgba(212, 175, 55, 0.12);
-  border-color: rgba(212, 175, 55, 0.25);
+.video-automation-card {
+  border-color: rgba(212, 175, 55, 0.3);
 }
 
 .proagent-product-card {
@@ -151,9 +139,9 @@ textarea:focus {
   box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
 }
 
-/* Trust strip separators hide on very small screens */
+/* Keep the assistant launcher compact on very small screens. */
 @media (max-width: 480px) {
-  .sticky-cta-label {
+  .ask-ai-arrow {
     display: none;
   }
 }
